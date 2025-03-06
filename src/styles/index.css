@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom base styles */
+body {
+  @apply font-sans text-gray-800 bg-gray-50;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-medium text-gray-900;
+}
+
+/* Timeline Component Styles */
+.timeline-container {
+  @apply relative;
+}
+
+.timeline-line {
+  @apply absolute left-1/2 -ml-px w-0.5 h-full bg-gray-300;
+}
+
+.timeline-item {
+  @apply relative flex items-center mb-8;
+}
+
+.timeline-item:last-child {
+  @apply mb-0;
+}
+
+.timeline-content {
+  @apply w-5/12;
+}
+
+.timeline-bubble {
+  @apply absolute left-1/2 -ml-3.5 w-7 h-7 rounded-full bg-primary-500 border-4 border-white;
+}
+
+/* Card styles */
+.card {
+  @apply bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300;
+}
+
+/* Quiz styles */
+.quiz-option {
+  @apply block w-full p-4 mb-2 border border-gray-200 rounded-lg hover:bg-blue-50 hover:border-blue-300 transition-colors cursor-pointer;
+}
+
+.quiz-option.selected {
+  @apply bg-blue-100 border-blue-500;
+}
+
+.quiz-option.correct {
+  @apply bg-green-100 border-green-500;
+}
+
+.quiz-option.incorrect {
+  @apply bg-red-100 border-red-500;
+}
+
+/* Map Component */
+.map-container {
+  @apply relative w-full h-96 bg-blue-50 rounded-lg overflow-hidden;
+}
+
+.map-marker {
+  @apply absolute w-6 h-6 rounded-full bg-red-500 -ml-3 -mt-3 cursor-pointer transition-transform hover:scale-125;
+}
+
+.map-marker:hover {
+  @apply z-10;
+}
+
+/* Navigation */
+.nav-link {
+  @apply px-3 py-2 rounded-md text-sm font-medium;
+}
+
+.nav-link-active {
+  @apply bg-primary-700 text-white;
+}
+
+.nav-link-inactive {
+  @apply text-gray-600 hover:bg-gray-100 hover:text-gray-900;
+}
